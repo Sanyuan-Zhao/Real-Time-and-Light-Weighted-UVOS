@@ -1,0 +1,26 @@
+train:
+  gpu_id: [0]
+#  dataset: DAVIS
+  dataset: SegTrackv2
+  prefix: ./checkpoint/train0727/
+  log_dir: ./runs/train0727
+  batch_size: 3
+#  pretrained: ./checkpoint/train0714/30.pth
+  lr: 0.0005
+
+#  pretraine22
+
+val:
+  gpu_id: [0]
+  num: 10
+  model: ./checkpoint/train1_225.pth
+  batch_size: 32
+  dataset: val
+
+test:
+  gpu_id: [0]
+  num: 10
+  batchsize : 2
+  model: ./checkpoint/trainn021/36.pth
+  savedir_name: save_img/test02136/
+  dataset: val
